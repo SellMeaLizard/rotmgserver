@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A417BDBC-8D6F-4661-9B23-2BEE92E295AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>db</RootNamespace>
+    <AssemblyName>db</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MonoTargetFrameworkVersion>v4.0</MonoTargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.ZLib">
+      <HintPath>..\packages\MarkerMetro.Unity.Ionic.Zlib.2.0.0.6\lib\net35\Ionic.ZLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.6\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DailyQuestConstants.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="Database.Guilds.cs" />
+    <Compile Include="Descriptors.cs" />
+    <Compile Include="XmlDatas.cs" />
+    <Compile Include="FameStats.cs" />
+    <Compile Include="IFeedable.cs" />
+    <Compile Include="Models.cs" />
+    <Compile Include="NWriter.cs" />
+    <Compile Include="NReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleSettings.cs" />
+    <Compile Include="WeakDictionary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\xml\10_kabam.rotmg.assets.EmbeddedData_TutorialScriptCXML_kabam.rotmg.assets.EmbeddedData_TutorialScriptCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\11_kabam.rotmg.assets.EmbeddedData_MidCXML_kabam.rotmg.assets.EmbeddedData_MidCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\12_kabam.rotmg.assets.EmbeddedData_LairOfDraconisCXML_kabam.rotmg.assets.EmbeddedData_LairOfDraconisCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\13_kabam.rotmg.assets.EmbeddedData_ProjectilesCXML_kabam.rotmg.assets.EmbeddedData_ProjectilesCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\14_kabam.rotmg.assets.EmbeddedData_IceCaveCXML_kabam.rotmg.assets.EmbeddedData_IceCaveCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\15_kabam.rotmg.assets.EmbeddedData_HighCXML_kabam.rotmg.assets.EmbeddedData_HighCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\16_kabam.rotmg.assets.EmbeddedData_ForestMazeCXML_kabam.rotmg.assets.EmbeddedData_ForestMazeCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\17_kabam.rotmg.assets.EmbeddedData_STestingCXML_kabam.rotmg.assets.EmbeddedData_STestingCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\18_kabam.rotmg.assets.EmbeddedData_LairOfShaitanCXML_kabam.rotmg.assets.EmbeddedData_LairOfShaitanCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\19_kabam.rotmg.assets.EmbeddedData_ManorOfTheImmortalsCXML_kabam.rotmg.assets.EmbeddedData_ManorOfTheImmortalsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\1_kabam.rotmg.assets.EmbeddedData_GhostShipCXML_kabam.rotmg.assets.EmbeddedData_GhostShipCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\20_kabam.rotmg.assets.EmbeddedData_CaveOfAThousandTreasuresCXML_kabam.rotmg.assets.EmbeddedData_CaveOfAThousandTreasuresCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\21_kabam.rotmg.assets.EmbeddedData_ShattersCXML_kabam.rotmg.assets.EmbeddedData_ShattersCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\22_kabam.rotmg.assets.EmbeddedData_LowCXML_kabam.rotmg.assets.EmbeddedData_LowCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\23_kabam.rotmg.assets.EmbeddedData_OryxCastleCXML_kabam.rotmg.assets.EmbeddedData_OryxCastleCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\24_kabam.rotmg.assets.EmbeddedData_TempObjectsCXML_kabam.rotmg.assets.EmbeddedData_TempObjectsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\25_kabam.rotmg.assets.EmbeddedData_PirateCaveCXML_kabam.rotmg.assets.EmbeddedData_PirateCaveCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\26_kabam.rotmg.assets.EmbeddedData_DyesCXML_kabam.rotmg.assets.EmbeddedData_DyesCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\27_kabam.rotmg.assets.EmbeddedData_EncountersCXML_kabam.rotmg.assets.EmbeddedData_EncountersCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\28_kabam.rotmg.assets.EmbeddedData_WillemTestingCXML_kabam.rotmg.assets.EmbeddedData_WillemTestingCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\29_kabam.rotmg.assets.EmbeddedData_CandyLandCXML_kabam.rotmg.assets.EmbeddedData_CandyLandCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\2_kabam.rotmg.assets.EmbeddedData_ForbiddenJungleCXML_kabam.rotmg.assets.EmbeddedData_ForbiddenJungleCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\30_kabam.rotmg.assets.EmbeddedData_EquipCXML_kabam.rotmg.assets.EmbeddedData_EquipCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\31_kabam.rotmg.assets.EmbeddedData_EpicPirateCaveCXML_kabam.rotmg.assets.EmbeddedData_EpicPirateCaveCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\32_kabam.rotmg.assets.EmbeddedData_PuppetMasterCXML_kabam.rotmg.assets.EmbeddedData_PuppetMasterCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\33_kabam.rotmg.assets.EmbeddedData_GroundCXML_kabam.rotmg.assets.EmbeddedData_GroundCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\34_kabam.rotmg.assets.EmbeddedData_TutorialObjectsCXML_kabam.rotmg.assets.EmbeddedData_TutorialObjectsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\35_kabam.rotmg.assets.EmbeddedData_StaticObjectsCXML_kabam.rotmg.assets.EmbeddedData_StaticObjectsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\36_kabam.rotmg.assets.EmbeddedData_BelladonnaCXML_kabam.rotmg.assets.EmbeddedData_BelladonnaCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\37_kabam.rotmg.assets.EmbeddedData_EquipmentSetsCXML_kabam.rotmg.assets.EmbeddedData_EquipmentSetsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\38_kabam.rotmg.assets.EmbeddedData_OryxChamberCXML_kabam.rotmg.assets.EmbeddedData_OryxChamberCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\39_kabam.rotmg.assets.EmbeddedData_TTestingCXML_kabam.rotmg.assets.EmbeddedData_TTestingCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\3_kabam.rotmg.assets.EmbeddedData_PermapetsCXML_kabam.rotmg.assets.EmbeddedData_PermapetsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\40_kabam.rotmg.assets.EmbeddedData_ShoreCXML_kabam.rotmg.assets.EmbeddedData_ShoreCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\41_kabam.rotmg.assets.EmbeddedData_OceanTrenchCXML_kabam.rotmg.assets.EmbeddedData_OceanTrenchCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\42_kabam.rotmg.assets.EmbeddedData_SkinsCXML_kabam.rotmg.assets.EmbeddedData_SkinsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\43_kabam.rotmg.assets.EmbeddedData_TextilesCXML_kabam.rotmg.assets.EmbeddedData_TextilesCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\44_kabam.rotmg.assets.EmbeddedData_MadLabCXML_kabam.rotmg.assets.EmbeddedData_MadLabCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\45_kabam.rotmg.assets.EmbeddedData_AbyssOfDemonsCXML_kabam.rotmg.assets.EmbeddedData_AbyssOfDemonsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\46_kabam.rotmg.assets.EmbeddedData_UndeadLairCXML_kabam.rotmg.assets.EmbeddedData_UndeadLairCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\47_kabam.rotmg.assets.EmbeddedData_ObjectsCXML_kabam.rotmg.assets.EmbeddedData_ObjectsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\48_kabam.rotmg.assets.EmbeddedData_SnakePitCXML_kabam.rotmg.assets.EmbeddedData_SnakePitCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\49_kabam.rotmg.assets.EmbeddedData_MonstersCXML_kabam.rotmg.assets.EmbeddedData_MonstersCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\4_kabam.rotmg.assets.EmbeddedData_MiniDungeonHubCXML_kabam.rotmg.assets.EmbeddedData_MiniDungeonHubCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\50_kabam.rotmg.assets.EmbeddedData_PetsCXML_kabam.rotmg.assets.EmbeddedData_PetsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\51_kabam.rotmg.assets.EmbeddedData_BTestingCXML_kabam.rotmg.assets.EmbeddedData_BTestingCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\52_kabam.rotmg.assets.EmbeddedData_RegionsCXML_kabam.rotmg.assets.EmbeddedData_RegionsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\53_kabam.rotmg.assets.EmbeddedData_KTestingCXML_kabam.rotmg.assets.EmbeddedData_KTestingCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\54_kabam.rotmg.assets.EmbeddedData_SpriteWorldCXML_kabam.rotmg.assets.EmbeddedData_SpriteWorldCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\55_kabam.rotmg.assets.EmbeddedData_NexusDestroyedCXML_kabam.rotmg.assets.EmbeddedData_NexusDestroyedCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\56_kabam.rotmg.assets.EmbeddedData_MTestingCXML_kabam.rotmg.assets.EmbeddedData_MTestingCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\57_kabam.rotmg.assets.EmbeddedData_TestingObjectsCXML_kabam.rotmg.assets.EmbeddedData_TestingObjectsCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\58_kabam.rotmg.assets.EmbeddedData_EpicSpiderDenCXML_kabam.rotmg.assets.EmbeddedData_EpicSpiderDenCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\59_kabam.rotmg.assets.EmbeddedData_OryxWineCellarCXML_kabam.rotmg.assets.EmbeddedData_OryxWineCellarCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\5_kabam.rotmg.assets.EmbeddedData_EpicForestMazeCXML_kabam.rotmg.assets.EmbeddedData_EpicForestMazeCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\6_kabam.rotmg.assets.EmbeddedData_HauntedCemeteryCXML_kabam.rotmg.assets.EmbeddedData_HauntedCemeteryCXML.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\Mountains.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\TombOfTheAncients.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\Players.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\xml\Addition.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="database.sql" />
+    <Content Include="test.xml" />
+    <Content Include="UnlockedAccounts.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\texture\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
