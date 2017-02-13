@@ -254,13 +254,13 @@
     <Content Include="resources\xml\58_kabam.rotmg.assets.EmbeddedData_EpicSpiderDenCXML_kabam.rotmg.assets.EmbeddedData_EpicSpiderDenCXML.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\xml\59_kabam.rotmg.assets.EmbeddedData_OryxWineCellarCXML_kabam.rotmg.assets.EmbeddedData_OryxWineCellarCXML.xml">
+    <Content Include="resources\xml\OryxWineCellar.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\xml\5_kabam.rotmg.assets.EmbeddedData_EpicForestMazeCXML_kabam.rotmg.assets.EmbeddedData_EpicForestMazeCXML.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\xml\6_kabam.rotmg.assets.EmbeddedData_HauntedCemeteryCXML_kabam.rotmg.assets.EmbeddedData_HauntedCemeteryCXML.xml">
+    <Content Include="resources\xml\HauntedCemetery.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\xml\Mountains.xml">
